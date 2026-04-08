@@ -1,0 +1,19 @@
+domain,signal_family,feature_count
+Angle / other,Angle features,7
+Frequency domain,Body acceleration,79
+Frequency domain,Body acceleration jerk,79
+Frequency domain,Body gyroscope,79
+Frequency domain,Body acceleration jerk magnitude,13
+Frequency domain,Body acceleration magnitude,13
+Frequency domain,Body gyroscope jerk magnitude,13
+Frequency domain,Body gyroscope magnitude,13
+Time domain,Body acceleration,40
+Time domain,Body acceleration jerk,40
+Time domain,Body gyroscope,40
+Time domain,Body gyroscope jerk,40
+Time domain,Gravity acceleration,40
+Time domain,Body acceleration jerk magnitude,13
+Time domain,Body acceleration magnitude,13
+Time domain,Body gyroscope jerk magnitude,13
+Time domain,Body gyroscope magnitude,13
+Time domain,Gravity acceleration magnitude,13

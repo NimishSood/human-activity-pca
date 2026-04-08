@@ -1,0 +1,17 @@
+component,grouping,group_name,feature_count,total_absolute_loading,share_of_top_loading_mass
+PC1,domain,Time domain,20,1.154425678605055,0.5005
+PC1,domain,Frequency domain,20,1.1521158540814251,0.4995
+PC1,sensor_family,Body acceleration,30,1.7307142333370913,0.7504
+PC1,sensor_family,Gyroscope,7,0.4033734861161175,0.1749
+PC1,sensor_family,Gravity acceleration,3,0.17245381323327127,0.0748
+PC1,feature_style,Magnitude / overall intensity,30,1.733295445702337,0.7515
+PC1,feature_style,Jerk-related change,7,0.40149203383299875,0.1741
+PC1,feature_style,Statistical summary,3,0.17175405315114428,0.0745
+PC2,domain,Time domain,29,2.897872081673273,0.7282
+PC2,domain,Frequency domain,11,1.081739513085885,0.2718
+PC2,sensor_family,Gyroscope,15,1.4188007541635634,0.3565
+PC2,sensor_family,Body acceleration,14,1.3596811778274622,0.3417
+PC2,sensor_family,Gravity acceleration,11,1.2011296627681323,0.3018
+PC2,feature_style,Frequency / coefficient pattern,37,3.720476573881413,0.9349
+PC2,feature_style,Statistical summary,2,0.16734224544735998,0.042
+PC2,feature_style,Magnitude / overall intensity,1,0.09179277543038454,0.0231

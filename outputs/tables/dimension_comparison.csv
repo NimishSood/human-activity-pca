@@ -1,0 +1,3 @@
+representation,matrix_shape,rows_observations,columns_features,meaning
+Original standardized feature space,"10,299 x 561",10299,561,All activity windows with the full engineered feature set.
+PCA visualization space,"10,299 x 2",10299,2,The same activity windows shown using only two principal components.

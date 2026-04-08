@@ -1,0 +1,6 @@
+summary_item,value
+Rows in the combined dataset,10299
+Engineered features per row,561
+Unique volunteers,30
+Activity classes,6
+What one row represents,One 2.56-second sliding window of smartphone sensor data

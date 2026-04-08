@@ -1,0 +1,8 @@
+component_number,component,explained_variance_ratio,cumulative_explained_variance
+1,PC1,0.5074,0.5074
+2,PC2,0.0624,0.5698
+5,PC5,0.0189,0.6401
+10,PC10,0.0095,0.7021
+20,PC20,0.0054,0.7684
+50,PC50,0.0023,0.871
+100,PC100,0.001,0.9467
