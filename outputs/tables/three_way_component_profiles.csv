@@ -1,0 +1,7 @@
+component,top_domain,domain_share,top_sensor_family,sensor_family_share,top_feature_style,feature_style_share,scenario
+PC1,Time domain,0.5005,Body acceleration,0.7504,Magnitude / overall intensity,0.7515,Full dataset
+PC2,Time domain,0.7282,Gyroscope,0.3565,Frequency / coefficient pattern,0.9349,Full dataset
+PC1,Frequency domain,0.5256,Body acceleration,0.7007,Magnitude / overall intensity,0.5506,First 500 rows
+PC2,Time domain,0.6362,Body acceleration,0.4436,Frequency / coefficient pattern,0.8158,First 500 rows
+PC1,Time domain,0.5248,Body acceleration,0.7504,Magnitude / overall intensity,0.6762,Random 500 rows
+PC2,Time domain,0.7234,Gravity acceleration,0.402,Frequency / coefficient pattern,0.8932,Random 500 rows

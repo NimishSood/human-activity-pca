@@ -1,0 +1,3 @@
+dataset,rows_n,features_p,p_greater_than_n,feature_to_sample_ratio,unique_subjects,activity_classes,sklearn_pca_components,max_nonzero_pcs_after_centering,forced_zero_directions
+Full dataset,10299,561,No,0.054,30,6,561,561,0
+First 500 rows,500,561,Yes,1.122,2,6,500,499,62

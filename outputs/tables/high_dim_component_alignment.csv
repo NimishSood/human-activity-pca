@@ -1,0 +1,3 @@
+component,loading_cosine_similarity,absolute_cosine_similarity,shared_top_loading_count,shared_feature_examples
+PC1,0.9923,0.9923,10,"fBodyAcc-sma(), fBodyAccJerk-sma(), fBodyAccMag-mean(), fBodyAccMag-sma(), fBodyBodyAccJerkMag-mean(), fBodyBodyAccJerkMag-sma(), fBodyGyro-sma(), tBodyAccJerk-sma()"
+PC2,0.9467,0.9467,12,"fBodyAcc-meanFreq()-Z, fBodyAccMag-meanFreq(), tBodyAccMag-arCoeff()1, tBodyAccMag-arCoeff()2, tBodyGyroMag-arCoeff()1, tBodyGyroMag-arCoeff()2, tGravityAcc-arCoeff()-Z,1, tGravityAcc-arCoeff()-Z,2"

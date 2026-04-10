@@ -1,0 +1,3 @@
+dataset,two_pc_silhouette_score,mean_centroid_distance,min_centroid_distance,max_centroid_distance,avg_within_class_spread
+Full dataset (n > p),0.0162,21.4042,1.1865,37.888,6.1191
+First 500 rows (p > n),0.109,22.695,0.7461,38.9896,5.5957

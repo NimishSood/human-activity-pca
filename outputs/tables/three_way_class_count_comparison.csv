@@ -1,0 +1,7 @@
+activity_label,full_dataset_count,full_dataset_share,first_500_rows_count,first_500_rows_share,random_500_rows_count,random_500_rows_share
+WALKING,1722,0.1672,126,0.252,99,0.198
+WALKING_UPSTAIRS,1544,0.1499,65,0.13,69,0.138
+WALKING_DOWNSTAIRS,1406,0.1365,72,0.144,61,0.122
+SITTING,1777,0.1725,73,0.146,98,0.196
+STANDING,1906,0.1851,84,0.168,69,0.138
+LAYING,1944,0.1888,80,0.16,104,0.208

@@ -1,0 +1,8 @@
+summary_item,value
+Rows in the original combined dataset,10299
+Rows kept for the high-dimensional analysis,500
+Engineered features per row,561
+Unique subjects in the full dataset,30
+Unique subjects in the first 500 rows,2
+Activity classes retained in the first 500 rows,6
+Subset rule,Use the first 500 rows from the same merged HAR table

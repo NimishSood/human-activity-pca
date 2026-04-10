@@ -1,0 +1,3 @@
+component,top_domain,domain_share,top_sensor_family,sensor_family_share,top_feature_style,feature_style_share
+PC1,Frequency domain,0.5256,Body acceleration,0.7007,Magnitude / overall intensity,0.5506
+PC2,Time domain,0.6362,Body acceleration,0.4436,Frequency / coefficient pattern,0.8158

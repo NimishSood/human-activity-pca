@@ -1,0 +1,8 @@
+metric,Full dataset,First 500 rows,Random 500 rows
+Activity classes,6,6,6
+Feature columns,561,561,561
+Missing values in features,0,0,0
+Rows (activity windows),10299,500,500
+Test rows,2947,0,148
+Training rows,7352,500,352
+Unique subjects,30,2,30

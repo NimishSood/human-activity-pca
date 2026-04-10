@@ -1,0 +1,8 @@
+metric,value
+Rows (activity windows),500
+Feature columns,561
+Unique subjects,2
+Activity classes,6
+Missing values in features,0
+Training rows,500
+Test rows,0

@@ -1,0 +1,4 @@
+scenario,scaled_matrix_shape,overall_mean_after_standardization,overall_std_after_standardization,largest_abs_feature_mean,largest_abs_feature_std_deviation
+Full dataset,"(10299, 561)",0.0,1.0,0.0,0.0
+First 500 rows,"(500, 561)",0.0,1.0,0.0,0.0
+Random 500 rows,"(500, 561)",-0.0,1.0,0.0,0.0

@@ -1,0 +1,4 @@
+scenario,matrix_shape,dimensionality_regime,selection_rule,purpose_in_notebook,sampling_note
+Full dataset,"10,299 x 561",n > p,All rows from the merged train + test HAR table,Reference setting with many more rows than features.,Baseline reference using the original merged dataset.
+First 500 rows,500 x 561,p > n,Use the first 500 rows from the merged HAR table,Order-based high-dimensional subset with minimal extra sampling logic.,"Convenience slice: valid for teaching `p > n`, but fully dependent on row order."
+Random 500 rows,500 x 561,p > n,Pure random 500-row sample from the merged HAR table,Broader high-dimensional subset that checks whether the `p > n` story survives under better coverage.,"Pure random sample with random_state=42; all six activities remain present, so no stratification is needed."

@@ -1,27 +1,49 @@
 # Human Activity Recognition with PCA
 
-This mini project explores **dimension reduction using PCA** on the **UCI Human Activity Recognition Using Smartphones** dataset.
+This project studies **principal component analysis (PCA)** on the **UCI Human Activity Recognition Using Smartphones** dataset.
 
-The project is organized for a class presentation: the notebook tells the story, and the helper modules keep the code readable.
+It now includes **two notebook analyses**:
 
-## What this project does
+- a baseline PCA notebook using the full dataset (`10,299 x 561`), which is a standard `n > p` setting
+- a comparison notebook using only the first 500 rows while keeping all 561 features (`500 x 561`), which creates a true high-dimensional `p > n` setting
 
-The notebook:
+The notebooks are written for presentation use: they explain the dataset in plain language, walk through preprocessing step by step, show PCA plots, and close with interpretation and limitations.
 
-- introduces the UCI HAR dataset in simple language,
-- explains why dimension reduction is useful when there are 561 features,
-- loads and checks the dataset,
-- standardizes the features before PCA,
-- shows the concrete reduction from the original feature space to a 2D PCA view,
-- applies PCA and measures explained variance,
-- reports how many principal components are needed to retain about 90% and 95% of the variance,
-- visualizes the first two principal components,
-- interprets what PC1 and PC2 seem to represent in plain English,
-- explains what the 2D PCA view does and does not show.
+## Notebooks
 
-The main analytical question is:
+### 1. Baseline notebook
 
-> Can PCA compress the high-dimensional smartphone activity dataset into a small number of components while still preserving enough structure to visually distinguish major human activities?
+Path:
+
+`notebook/human_activity_pca_analysis.ipynb`
+
+What it does:
+
+- loads the full merged HAR dataset
+- standardizes the 561 engineered features
+- applies PCA
+- studies explained variance
+- visualizes the first two principal components
+- interprets PC1 and PC2 in beginner-friendly language
+
+This notebook is useful as the original reference point, but it is **not** a strict high-dimensional example because it uses many more rows than columns.
+
+### 2. High-dimensional comparison notebook
+
+Path:
+
+`notebook/human_activity_pca_high_dimensional_comparison.ipynb`
+
+What it does:
+
+- loads the same HAR dataset
+- keeps only the **first 500 rows** while preserving all **561 features**
+- explains clearly why this creates a `p > n` setting
+- reruns PCA in that high-dimensional regime
+- compares the high-dimensional results directly against the full-dataset PCA results
+- discusses what changes, what stays similar, and what becomes less stable or less interpretable
+
+This is the main notebook to use if you want to discuss **PCA under sample-limited conditions** rather than only dimensionality reduction in general.
 
 ## Dataset used
 
@@ -34,18 +56,18 @@ High-level background:
 - Each row represents one 2.56-second sliding window of motion data.
 - The dataset provides 561 engineered time-domain and frequency-domain features.
 
-Expected dataset location inside this project:
+Expected dataset location:
 
 `data/raw/UCI HAR Dataset/`
 
-The code is written around the standard UCI HAR folder structure, including:
+The code expects the standard UCI HAR structure, including:
 
 - `train/X_train.txt`, `train/y_train.txt`, `train/subject_train.txt`
 - `test/X_test.txt`, `test/y_test.txt`, `test/subject_test.txt`
 - `features.txt`
 - `activity_labels.txt`
 
-For this analysis, the train and test files are merged into one dataframe because the goal is **exploration and visualization**, not model evaluation.
+Both notebooks merge the train and test splits because the goal is **exploration and visualization**, not train/test evaluation.
 
 ## Project structure
 
@@ -53,7 +75,8 @@ For this analysis, the train and test files are merged into one dataframe becaus
 human-activity-pca/
 |
 |-- notebook/
-|   `-- human_activity_pca_analysis.ipynb
+|   |-- human_activity_pca_analysis.ipynb
+|   `-- human_activity_pca_high_dimensional_comparison.ipynb
 |
 |-- src/
 |   |-- __init__.py
@@ -76,13 +99,13 @@ human-activity-pca/
 `-- README.md
 ```
 
-## What each helper module does
+## What the helper modules do
 
 - `src/data_loader.py`: loads feature names, activity labels, and merges the train/test splits.
-- `src/preprocessing.py`: handles initial checks, class distribution, feature standardization, and before-vs-after dimension comparisons.
-- `src/pca_analysis.py`: fits PCA, computes explained variance, finds variance-retention thresholds, and builds grouped loading summaries for presentation-friendly PC interpretation.
-- `src/visualization.py`: creates the class distribution plot, scree plot, cumulative variance plot, and 2D PCA scatter plot.
-- `src/utils.py`: handles project paths, output folders, random seeds, and saving tables/figures.
+- `src/preprocessing.py`: handles initial checks, class distributions, feature standardization, and before-vs-after dimension comparisons.
+- `src/pca_analysis.py`: fits PCA, computes explained variance summaries, builds variance-threshold tables, and creates grouped loading summaries for interpretation.
+- `src/visualization.py`: contains reusable plotting helpers for class distributions and PCA visuals.
+- `src/utils.py`: handles project paths, directory creation, reproducibility, and saving figures/tables.
 
 ## How to run the project
 
@@ -114,34 +137,31 @@ Place the downloaded dataset folder here:
 data/raw/UCI HAR Dataset/
 ```
 
-If you already have the dataset somewhere else, copy the full `UCI HAR Dataset` folder into `data/raw/`.
-
-### 5. Run the notebook
-
-From the project root:
+### 5. Run Jupyter
 
 ```powershell
 jupyter lab
 ```
 
-Then open:
+Then open either:
 
-`notebook/human_activity_pca_analysis.ipynb`
+- `notebook/human_activity_pca_analysis.ipynb`
+- `notebook/human_activity_pca_high_dimensional_comparison.ipynb`
 
-The notebook is written to run from top to bottom without manual code edits after the dataset is in place.
+Both notebooks are written to run top to bottom without manual code changes once the dataset is present.
 
 ## Outputs generated
 
-When the notebook runs, it saves:
+### Baseline notebook outputs
 
-### Figures
+Figures:
 
 - `outputs/figures/class_distribution.png`
 - `outputs/figures/explained_variance_scree.png`
 - `outputs/figures/cumulative_explained_variance.png`
 - `outputs/figures/pca_2d_scatter.png`
 
-### Tables
+Tables:
 
 - `outputs/tables/dataset_overview.csv`
 - `outputs/tables/feature_group_summary.csv`
@@ -157,29 +177,70 @@ When the notebook runs, it saves:
 - `outputs/tables/top_pc_loadings.csv`
 - `outputs/tables/activity_centroids.csv`
 
-## What the results are expected to show
+### High-dimensional comparison notebook outputs
 
-In this project run:
+Figures:
 
-- the notebook makes the dimension reduction concrete by moving from **10,299 x 561** to **10,299 x 2** for visualization,
-- the first two principal components capture about **57%** of the total variance,
-- about **65** principal components are needed to retain roughly **90%** of the variance,
-- about **104** principal components are needed to retain roughly **95%** of the variance,
-- PCA gives a clear split between **dynamic activities** and **stationary activities**,
-- `LAYING` tends to separate more clearly than `SITTING` and `STANDING`,
-- `SITTING` and `STANDING` overlap the most in the 2D view,
-- the walking classes are related but still show useful structure,
-- PC1 behaves mostly like a broad movement-intensity axis, while PC2 adds finer separation between related activity styles.
+- `outputs/figures/high_dim_class_count_comparison.png`
+- `outputs/figures/high_dim_variance_comparison.png`
+- `outputs/figures/high_dim_scatter_comparison.png`
 
-So the main message is not that PCA solves the classification problem by itself. The message is that PCA gives a strong **low-dimensional summary** of a very high-dimensional sensor dataset.
+Tables:
+
+- `outputs/tables/high_dim_dataset_overview.csv`
+- `outputs/tables/high_dim_setting_comparison.csv`
+- `outputs/tables/high_dim_class_count_comparison.csv`
+- `outputs/tables/high_dim_initial_checks.csv`
+- `outputs/tables/high_dim_subject_coverage.csv`
+- `outputs/tables/high_dim_scaling_checks.csv`
+- `outputs/tables/high_dim_raw_vs_standardized_examples.csv`
+- `outputs/tables/high_dim_variance_comparison.csv`
+- `outputs/tables/high_dim_separation_comparison.csv`
+- `outputs/tables/high_dim_component_alignment.csv`
+- `outputs/tables/high_dim_dimension_comparison.csv`
+- `outputs/tables/high_dim_component_profile.csv`
+- `outputs/tables/high_dim_activity_centroids.csv`
+- `outputs/tables/high_dim_top_pc_loadings.csv`
+
+## Expected findings
+
+### Baseline full-dataset PCA
+
+In the original full-data analysis:
+
+- the notebook reduces the data from **10,299 x 561** to **10,299 x 2** for visualization
+- the first two principal components capture about **56.98%** of the total variance
+- about **65** principal components are needed to retain roughly **90%** of the variance
+- about **104** principal components are needed to retain roughly **95%** of the variance
+- PCA clearly separates broad movement activities from mostly stationary postures
+
+### High-dimensional `p > n` PCA
+
+In the new comparison notebook:
+
+- the notebook restricts the data to **500 x 561**, so the number of features exceeds the number of samples
+- the first two principal components capture about **61.41%** of the total variance
+- about **43** principal components are needed to retain roughly **90%** of the variance
+- about **74** principal components are needed to retain roughly **95%** of the variance
+- the first 500 rows still contain all 6 activity classes, but only **2 subjects**
+- after centering, at least **62** directions must have zero sample variance because the subset is sample-limited
+
+### Main comparison takeaway
+
+The high-dimensional notebook shows an important lesson:
+
+- PCA can still produce a useful 2D structure in a `p > n` setting
+- the leading components can even appear stronger in a smaller subset
+- but stronger variance capture does **not** automatically mean the result is more reliable
+- with fewer subjects and fewer observations, the geometry is less representative and potentially less stable
+
+So the project is now useful for teaching **both**:
+
+- standard PCA as a dimensionality-reduction tool
+- and PCA in a stricter high-dimensional `features > samples` regime
 
 ## Short takeaway
 
-PCA works well here as a first exploration tool:
+The baseline notebook shows how PCA summarizes a large sensor-feature dataset.
 
-- it reduces 561 features to a small number of interpretable components,
-- it makes the dataset easy to visualize,
-- it reveals broad activity structure,
-- but it does not capture every detail in only two components.
-
-That balance makes it a good topic for a clean classroom presentation on dimension reduction.
+The new notebook shows what changes when the same 561-feature problem is moved into a true `p > n` setting. PCA still reveals broad structure, but the result becomes more sample-dependent and should be interpreted more carefully.

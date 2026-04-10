@@ -1,0 +1,4 @@
+scenario,dimensionality_regime,rows_n,features_p,p_greater_than_n,feature_to_sample_ratio,unique_subjects,dominant_subject_share,top_two_subject_share,effective_subject_count,training_rows,test_rows,activity_classes_present,sklearn_pca_components,max_nonzero_pcs_after_centering,forced_zero_directions
+Full dataset,n > p,10299,561,No,0.054,30,0.03971259345567531,0.07932809010583552,29.68946968155366,7352,2947,6,561,561,0
+First 500 rows,p > n,500,561,Yes,1.122,2,0.694,1.0,1.738308139454032,500,0,6,500,499,62
+Random 500 rows,p > n,500,561,Yes,1.122,30,0.058,0.11,28.16584046867958,352,148,6,500,499,62

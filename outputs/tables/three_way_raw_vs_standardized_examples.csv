@@ -1,0 +1,16 @@
+scenario,feature_example,raw_min,raw_max,raw_mean,raw_std,standardized_min,standardized_max,standardized_mean,standardized_std
+Full dataset,tBodyAcc-mean()-X,-1.0,1.0,0.2743,0.0676,-18.8445,10.7306,-0.0,1.0
+Full dataset,tBodyAcc-mean()-Y,-1.0,1.0,-0.0177,0.0371,-26.4571,27.413,0.0,1.0
+Full dataset,tBodyAcc-mean()-Z,-1.0,1.0,-0.1089,0.053,-16.8031,20.9111,0.0,1.0
+Full dataset,tBodyAcc-std()-X,-1.0,1.0,-0.6078,0.4387,-0.8941,3.6651,-0.0,1.0
+Full dataset,tBodyAcc-std()-Y,-1.0,1.0,-0.5102,0.5002,-0.9792,3.0191,0.0,1.0
+First 500 rows,tBodyAcc-mean()-X,-0.3612,0.4699,0.2675,0.0794,-7.9158,2.5492,0.0,1.0
+First 500 rows,tBodyAcc-mean()-Y,-0.6841,0.3241,-0.0168,0.0489,-13.6453,6.9727,0.0,1.0
+First 500 rows,tBodyAcc-mean()-Z,-1.0,0.3467,-0.1063,0.0686,-13.0305,6.6039,0.0,1.0
+First 500 rows,tBodyAcc-std()-X,-0.9993,0.3891,-0.5814,0.3945,-1.0594,2.4604,0.0,1.0
+First 500 rows,tBodyAcc-std()-Y,-0.9984,0.5325,-0.4167,0.4961,-1.1725,1.9136,0.0,1.0
+Random 500 rows,tBodyAcc-mean()-X,-0.4163,0.4883,0.2735,0.0785,-8.7917,2.738,-0.0,1.0
+Random 500 rows,tBodyAcc-mean()-Y,-1.0,0.2644,-0.0196,0.0521,-18.8348,5.4565,-0.0,1.0
+Random 500 rows,tBodyAcc-mean()-Z,-0.926,0.3755,-0.1094,0.0634,-12.8764,7.6469,-0.0,1.0
+Random 500 rows,tBodyAcc-std()-X,-0.9995,0.5173,-0.6073,0.4297,-0.9127,2.6171,0.0,1.0
+Random 500 rows,tBodyAcc-std()-Y,-1.0,0.7674,-0.4977,0.5115,-0.9821,2.4731,0.0,1.0

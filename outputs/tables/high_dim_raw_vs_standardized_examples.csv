@@ -1,0 +1,6 @@
+feature_example,raw_min,raw_max,raw_mean,raw_std,standardized_min,standardized_max,standardized_mean,standardized_std
+tBodyAcc-mean()-X,-0.3612,0.4699,0.2675,0.0794,-7.9158,2.5492,0.0,1.0
+tBodyAcc-mean()-Y,-0.6841,0.3241,-0.0168,0.0489,-13.6453,6.9727,0.0,1.0
+tBodyAcc-mean()-Z,-1.0,0.3467,-0.1063,0.0686,-13.0305,6.6039,0.0,1.0
+tBodyAcc-std()-X,-0.9993,0.3891,-0.5814,0.3945,-1.0594,2.4604,0.0,1.0
+tBodyAcc-std()-Y,-0.9984,0.5325,-0.4167,0.4961,-1.1725,1.9136,0.0,1.0

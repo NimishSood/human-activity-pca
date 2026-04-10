@@ -1,0 +1,7 @@
+representation,matrix_shape,rows_observations,columns_features,meaning,scenario
+Original standardized feature space,"10,299 x 561",10299,561,All activity windows with the full engineered feature set.,Full dataset (n > p)
+2D PCA space,"10,299 x 2",10299,2,The same activity windows shown using only two principal components.,Full dataset (n > p)
+Original standardized feature space,500 x 561,500,561,All activity windows with the full engineered feature set.,First 500 rows (p > n)
+2D PCA space,500 x 2,500,2,The same activity windows shown using only two principal components.,First 500 rows (p > n)
+Original standardized feature space,500 x 561,500,561,All activity windows with the full engineered feature set.,Random 500 rows (p > n)
+2D PCA space,500 x 2,500,2,The same activity windows shown using only two principal components.,Random 500 rows (p > n)
